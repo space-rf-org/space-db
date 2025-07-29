@@ -70,7 +70,7 @@ namespace physical_planner {
     HashJoinOperator::HashJoinOperator(logical_planner::JoinType type, std::string  condition)
             : PhysicalOperator(PhysicalOperatorType::HASH_JOIN), joinType(type), joinCondition(std::move(condition)) {}
 
-    std::string HashJoinOperator::toString() const override {
+    std::string HashJoinOperator::toString() const {
         std::string joinTypeStr = joinTypeToString(joinType);
         std::string algorithm = isGraceHashJoin ? "GraceHashJoin" : "HashJoin";
         return algorithm + "(" + joinTypeStr + ", " + joinCondition + ")";
