@@ -17,3 +17,6 @@ mkdir build
 cd build
 cmake ..
 make
+./logical_planner
+```
+### Output
